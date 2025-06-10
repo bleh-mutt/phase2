@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f9f9f9;
+  color: #333;
+  line-height: 1.8;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  font-size: 16px;
+}
+
+/* Headings */
+h1, h2 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 17px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.header-img-wrapper {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+    background: rgba(181, 22, 78, 1);
+    z-index: 9999;
+    /* Remove or change these lines */
+    transform: translateY(0); /* Changed from -100% */
+    opacity: 1; /* Changed from 0 */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+  
+  .header-content {
+    position: relative;
+    max-width: 1200px; /* Optional: limit total width */
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .header-left {
+    flex: 1;
+  }
+  
+  .header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .header-img {
+    height: 50px;
+    width: auto;
+    max-width: 200px;
+  }
+  
+  .header-right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .header-nav a {
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    white-space: nowrap; /* Prevent wrapping */
+    transition: color 0.3s ease;
+  }
+  
+  .header-nav a:hover {
+    color: #ffccdd;
+  }
+    /* --- End Header Styles --- */
+  
+    .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: rgba(181, 22, 78, 1);
+    padding: 10px 0;
+    min-width: 150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 9999;
+    border-radius: 4px;
+  
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .dropdown-menu a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .dropdown-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+header {
+    background:#880e4f;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+main {
+  padding: 50px 20px;
+}
+
+/* Section layout and animation */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding: 0 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease;
+  }
+  
+  /* Alternate section layout */
+  section:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  
+  /* Text block */
+  .text {
+    flex: 1 1 400px;
+    padding: 20px;
+  }
+  
+  /* Images */
+  section img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  section img:hover {
+    transform: scale(1.02);
+  }
+  
+
+footer {
+    background: rgba(181,22,78,255);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: auto; /* Pushes footer to the bottom */
+  }
+
+/* Fade-in on scroll animation */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: opacity 0.4s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #880037;
+  }

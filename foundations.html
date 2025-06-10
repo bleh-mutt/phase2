@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - Amrita Vishwa Vidyapeetham</title>
+  <link rel="stylesheet" href="foundat.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Amrita_Vishwa_Vidyapeetham_-_Logo_Icon.svg/1200px-Amrita_Vishwa_Vidyapeetham_-_Logo_Icon.svg.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header-img-wrapper">
+    <div class="header-content">
+      <div class="header-left">
+        <div class="dropdown">
+            <button class="dropdown-toggle">Social <i class="fa-solid fa-globe"></i> </button>
+            <div class="dropdown-menu">
+              <a href="https://www.linkedin.com/company/amritacomputing/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin"></i>  LinkedIn</a>
+              <a href="mailto:campus@am.amrita.edu" target="_blank"><i class="fa-solid fa-envelope"></i>  Gmail</a>
+              <a href="https://www.instagram.com/amritapuricampus/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i>  Instagram</a>
+              <a href="https://www.facebook.com/amritapuricampus/" target="_blank"><i class="fa-brands fa-facebook"></i>  Facebook</a>
+              <a href="https://www.youtube.com/@AmritaUniversity" target="_blank"><i class="fa-brands fa-youtube"></i>  YouTube</a>
+              <a href="https://x.com/amritapuriuniv" target="_blank"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+            </div>
+          </div>
+      </div>
+  
+      <div class="header-center">
+        <a href="edited.html">
+          <img src="https://amritatec.in/images/amrita1.jpg" alt="Logo" class="header-img" />
+        </a>
+      </div>
+  
+      <nav class="header-right header-nav">
+        <a href="about1.html">About</a>
+      <a href="foundations.html">Faculty</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+      </nav>
+    </div>
+  </div>
+  <header>
+    <h1>Faculty</h1>
+  </header>
+
+  <main>
+    <section class="about fade-in">
+      <div class="text">
+        <h2>Our Chancellor</h2>
+        <p>Sri Mata Amritanandamayi Devi, known as Amma, has dedicated her life to spreading a message of peace, tolerance, and compassion. Accessible to one and all, she has embraced more than 40 million people worldwide, and inspired a global volunteer-based humanitarian movement to help alleviate the burden of the poor and suffering.</p>
+        <p>In her role as the Chancellor of Amrita Vishwa Vidyapeetham, Amma has adopted a unique blend of multidisciplinary and compassion driven pathways that focus on research to find solutions for the world’s most pressing issues.</p>
+      </div>
+      <div><img src="https://www.worldhindunews.com/wp-content/uploads/2016/10/Image-Of-Mata-Amritanandamayi-Ji.jpg" alt="Amma" ></div>
+    </section>
+
+    <section class="vision fade-in">
+      <div class="text">
+        <h2>Dr. Balakrishnan Shankar</h2>
+        <p style="font-size: large;">Dean, School of Engineering</p>
+      </div>
+      <div ><img src="https://webfiles.amrita.edu/2024/01/MPoeGhbn-dr-balakrishnan.jpg" height="400px" width="600px" alt="Dr. Balakrishnan Shankar"></div>
+    </section>
+
+    <section class="mission fade-in">
+      <div class="text">
+        <h2>Dr. Jyothi S. N.</h2>
+        <p style="font-size: large;">Associate Dean</p>
+      </div>
+      <div><img src="https://webfiles.amrita.edu/2024/01/5vI4AygF-dr-jyothi-s.jpg" height="400px" width="600px" alt="Jyothi S. N."></div>
+    </section>
+
+    <section class="global fade-in">
+      <div class="text">
+        <h2>Ani R.</h2>
+        <p>Chairperson, School of Computing</p>
+      </div>
+      <div><img src="https://webfiles.amrita.edu/2020/06/Ani-R_asst-professor_vice-chairperson_cse_amritauniversity_amritapuri.jpg" height="400px" width="600px" alt="Ani R."></div>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2025 Amrita Vishwa Vidyapeetham | Where Education Meets Compassion
+  </footer>
+  <button id="backToTop" title="Back to Top">↑</button>
+  <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  // Back to top button
+  const backToTop = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions | Amrita</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Amrita_Vishwa_Vidyapeetham_-_Logo_Icon.svg/1200px-Amrita_Vishwa_Vidyapeetham_-_Logo_Icon.svg.png">
+  <link rel="stylesheet" href="adm.css">
+  
+</head>
+<body>
+    <div class="header-img-wrapper">
+        <div class="header-content">
+          <div class="header-left">
+            <div class="dropdown">
+                <button class="dropdown-toggle">Social <i class="fa-solid fa-globe"></i> </button>
+                <div class="dropdown-menu">
+                  <a href="https://www.linkedin.com/company/amritacomputing/posts/?feedView=all" target="_blank"><i class="fa-brands fa-linkedin"></i>  LinkedIn</a>
+                  <a href="mailto:campus@am.amrita.edu" target="_blank"><i class="fa-solid fa-envelope"></i>  Gmail</a>
+                  <a href="https://www.instagram.com/amritapuricampus/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i>  Instagram</a>
+                  <a href="https://www.facebook.com/amritapuricampus/" target="_blank"><i class="fa-brands fa-facebook"></i>  Facebook</a>
+                  <a href="https://www.youtube.com/@AmritaUniversity" target="_blank"><i class="fa-brands fa-youtube"></i>  YouTube</a>
+                  <a href="https://x.com/amritapuriuniv" target="_blank"><i class="fa-brands fa-twitter"></i>  Twitter</a>
+                </div>
+              </div>
+          </div>
+      
+          <div class="header-center">
+            <a href="edited.html">
+              <img src="https://amritatec.in/images/amrita1.jpg" alt="Logo" class="header-img" />
+            </a>
+          </div>
+      
+          <nav class="header-right header-nav">
+            <a href="about1.html">About</a>
+      <a href="foundations.html">Faculty</a>
+      <a href="academics.html">Academics</a>
+      <a href="admissions.html">Admissions</a>
+          </nav>
+        </div>
+      </div>
+
+  <div id="admissions-forms-section">
+    <div class="admissions-content">
+      <h2>Admissions Inquiry</h2>
+
+      <div class="form-section">
+        <h3>Undergraduate Admissions Inquiry</h3>
+        <form id="ug-form" method="POST">
+          <input type="hidden" name="form_type" value="undergraduate">
+          <div class="form-group">
+            <label for="ug_name">Full Name:</label>
+            <input type="text" id="ug_name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="ug_email">Email Address:</label>
+            <input type="email" id="ug_email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="ug_phone">Phone Number:</label>
+            <input type="text" id="ug_phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="ug_program">Program of Interest:</label>
+            <select id="ug_program" name="program" required>
+              <option value="">Select a Program</option>
+              <option value="B.Tech">B.Tech</option>
+              <option value="B.Sc">B.Sc</option>
+              <option value="B.Com">B.Com</option>
+              <option value="BCA">BCA</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="ug_message">Your Message (Optional):</label>
+            <textarea id="ug_message" name="message" rows="5"></textarea>
+          </div>
+          <button type="submit">Submit Inquiry</button>
+        </form>
+      </div>
+
+      <div class="form-section">
+        <h3>Postgraduate Admissions Inquiry</h3>
+        <form id="pg-form" method="POST">
+          <input type="hidden" name="form_type" value="postgraduate">
+          <div class="form-group">
+            <label for="pg_name">Full Name:</label>
+            <input type="text" id="pg_name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="pg_email">Email Address:</label>
+            <input type="email" id="pg_email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="pg_phone">Phone Number:</label>
+            <input type="text" id="pg_phone" name="phone">
+          </div>
+          <div class="form-group">
+            <label for="pg_program">Program of Interest:</label>
+            <select id="pg_program" name="program" required>
+              <option value="">Select a Program</option>
+              <option value="M.Tech">M.Tech</option>
+              <option value="MBA">MBA</option>
+              <option value="MCA">MCA</option>
+              <option value="Ph.D">Ph.D</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pg_qualification">Highest Qualification:</label>
+            <input type="text" id="pg_qualification" name="qualification">
+          </div>
+          <button type="submit">Submit Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="thank-you-message-section">
+    <div class="illustrious-message-container">
+        <div class="icon-wrapper">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <h2>Inquiry Submitted Successfully!</h2>
+        <p>Thank you for your interest in Amrita University. Your admissions inquiry has been received.</p>
+        <p><strong>Note: This is a demonstration. No actual email or SMS has been sent, and your data has not been stored.</strong></p>
+        <p>Our admissions team would normally review your details and get back to you as soon as possible.</p>
+        <a href="edited.html" class="action-button">Return to Home Page</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Amrita Vishwa Vidyapeetham | Where Education Meets Compassion</p>
+  </footer>
+
+  <script>
+    // Get references to the sections
+    const admissionsFormsSection = document.getElementById('admissions-forms-section');
+    const thankYouMessageSection = document.getElementById('thank-you-message-section');
+
+    // Get references to the forms
+    const ugForm = document.getElementById('ug-form');
+    const pgForm = document.getElementById('pg-form');
+
+    // Function to handle form submission
+    function handleFormSubmission(event) {
+        event.preventDefault(); // Prevent default form submission (which would try to send to a server)
+
+        // You can collect form data here if needed, but it won't be sent anywhere.
+        // For example:
+        // const formData = new FormData(event.target);
+        // console.log("Form submitted data:", Object.fromEntries(formData.entries()));
+
+        // Hide the forms section
+        admissionsFormsSection.style.display = 'none';
+
+        // Show the thank you message section
+        thankYouMessageSection.style.display = 'flex'; // Use 'flex' because of align-items/justify-content for centering
+
+        // Scroll to the top of the page for a better user experience
+        window.scrollTo(0, 0);
+    }
+
+    // Add event listeners for form submissions
+    ugForm.addEventListener('submit', handleFormSubmission);
+    pgForm.addEventListener('submit', handleFormSubmission);
+  </script>
+</body>
+</html>

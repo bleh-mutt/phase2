@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  :root {
+    --primary: #b5164e; /* from rgba(181,22,78,255) */
+    --primary-light: #e03c6d;
+  }
+
+  .header-img-wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  background: rgba(181, 22, 78, 1);
+  z-index: 9999;
+  /* Remove or change these lines */
+  transform: translateY(0); /* Changed from -100% */
+  opacity: 1; /* Changed from 0 */
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.header-content {
+  position: relative;
+  max-width: 1200px; /* Optional: limit total width */
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left {
+  flex: 1;
+}
+
+.header-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-img {
+  height: 50px;
+  width: auto;
+  max-width: 200px;
+}
+
+.header-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header-nav a {
+  margin-left: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap; /* Prevent wrapping */
+  transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+  color: #ffccdd;
+}
+  /* --- End Header Styles --- */
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(181, 22, 78, 1);
+  padding: 10px 0;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 9999;
+  border-radius: 4px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+header {
+    background: #880e4f;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  header h1 {
+    font-size: 3em;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+  }
+
+  section {
+    margin-bottom: 50px;
+    background: #fff;
+    border-left: 10px solid var(--primary);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+  }
+
+  section.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .section-content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .section-content img {
+    flex: 1 1 300px;
+    max-width: 500px;
+    height: 300px;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .text {
+    flex: 1 1 400px;
+    padding: 20px;
+  }
+
+  h2 {
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  footer {
+    background-color: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+  }
+
+  #backToTop {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    transition: opacity 0.4s ease;
+  }
+
+  #backToTop:hover {
+    background-color: #880037;
+  }
+
+  @media (max-width: 768px) {
+    .section-content {
+      flex-direction: column;
+    }
+
+    header h1 {
+      font-size: 2em;
+    }
+
+    .section-content img,
+    .text {
+      width: 100%;
+    }
+  }

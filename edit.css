@@ -1,0 +1,354 @@
+html{
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #111;
+    color: white;
+  }
+
+  /* Dropdown container */
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(181, 22, 78, 1);
+  padding: 10px 0;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 9999;
+  border-radius: 4px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 10px 15px;
+  transition: background 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(181, 22, 78, 1);
+  padding: 10px 0;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 9999;
+  border-radius: 4px;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+  .hero-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: auto;
+  max-width: 80vw; /* Adjust width */
+  max-height: 80vh; /* Adjust height */
+  z-index: 1;
+  transition: opacity 0.5s ease;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+  section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 2rem;
+    padding: 20px;
+    text-align: center;
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  .pin-section {
+    height: 100vh;
+    background: rgba(181,22,78,255);
+    position: relative;
+  }
+
+  
+
+  .header-img-wrapper {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+padding: 20px 0;
+background: rgba(181, 22, 78, 1);
+z-index: 9999;
+transform: translateY(-100%);
+opacity: 0;
+transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.header-content {
+position: relative;
+max-width: 1200px; /* Optional: limit total width */
+margin: 0 auto;
+padding: 0 20px;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.header-left {
+flex: 1;
+}
+
+.header-center {
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+}
+
+.header-img {
+height: 50px;
+width: auto;
+max-width: 200px;
+}
+
+.header-right {
+flex: 1;
+display: flex;
+justify-content: flex-end;
+align-items: center;
+}
+
+.header-nav a {
+margin-left: 20px;
+color: white;
+text-decoration: none;
+font-weight: 500;
+white-space: nowrap; /* Prevent wrapping */
+transition: color 0.3s ease;
+}
+
+.header-nav a:hover {
+color: #ffccdd;
+}
+
+
+
+
+  .zoom-img {
+    width: 60vw;
+    max-width: 800px;
+    transform: scale(0.8);
+    opacity: 0;
+    border-radius: 12px;
+    /* box-shadow: 0 0 20px rgba(255,255,255,0.1); */
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+
+  .video-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    filter: brightness(0.4);
+  }
+
+  .video-text {
+    z-index: 1;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700
+  }
+
+  .video-text a{
+    text-decoration: none;
+    color:white;
+    transition: 0.25s;
+  }
+
+  .video-text a:hover{
+    color:rgba(181, 22, 78, 1);
+    transition: 0.25s;
+  }
+
+  .bg-scroll-section {
+    position: relative;
+    height: 100vh;
+    background-size: 120%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background-size 0.3s ease;
+    
+  }
+
+  .bg-scroll-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5); /* adjust opacity as needed */
+z-index: 0;
+}
+
+
+  .bg-scroll-text{
+    z-index: 1;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(50px);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .bg-scroll-text h1{
+    font-weight: 700;
+  }
+
+  .bg-scroll-text p{
+    font-weight: 600;
+    /* color: rgba(181,22,78,255); */
+  }
+  
+  .bg-scroll-text a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    transition: 0.25s;
+  }
+
+  .bg-scroll-text a:hover{
+    color:rgba(181, 22, 78, 1);
+    transition: 0.25s;
+  }
+
+  footer {
+  background: rgba(181,22,78,255);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position:relative;
+  bottom: 0;
+  width: 100%;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
