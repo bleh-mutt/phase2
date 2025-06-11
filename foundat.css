@@ -192,6 +192,22 @@ section {
   section img:hover {
     transform: scale(1.02);
   }
+
+/* Responsive layout for small screens */
+@media (max-width: 768px) {
+  section {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .text {
+    padding: 0;
+  }
+
+  section img {
+    max-width: 100%;
+  }
+}
   
 
 footer {
