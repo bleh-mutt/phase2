@@ -10,61 +10,6 @@ html{
 
   /* Dropdown container */
 
-  .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-toggle {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 10px 15px;
-  transition: background 0.3s ease;
-}
-
-.dropdown-toggle:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: rgba(181, 22, 78, 1);
-  padding: 10px 0;
-  min-width: 150px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 9999;
-  border-radius: 4px;
-
-  opacity: 0;
-  transform: translateY(-10px);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.dropdown-menu a {
-  color: white;
-  padding: 10px 20px;
-  text-decoration: none;
-  display: block;
-  transition: background 0.3s ease;
-}
-
-.dropdown-menu a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dropdown:hover .dropdown-menu {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
